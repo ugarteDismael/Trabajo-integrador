@@ -10,7 +10,12 @@ def mostrar_estado(palabra_secreta, letras_adivinadas, vidas, letras_incorrectas
         if letra in letras_adivinadas:
             estado += letra
         else:
-            estado += '_ '            
-    print(f"\nPalabra: {estado}")
-    print(f"Vidas restantes: {vidas}")
-    print(f"Letras incorrectas: {' '.join(letras_incorrectas)}")
+            estado += '_ '
+    
+    print("\nPalabra:", estado)
+    print("Vidas restantes:", vidas)
+    letras_como_texto = ''
+    for letra in letras_incorrectas:
+        letras_como_texto += letra + ' '
+    
+    print("Letras incorrectas:", letras_como_texto)
